@@ -290,7 +290,5 @@ defaults:
       comments: # true
       share: true
       related: true
-      sidebar:
-        nav: 
-          - title: Categories
-            children: /categories/
+sidebar:
+  nav: "docs"
