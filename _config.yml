@@ -107,7 +107,7 @@ author:
   name             : "Crocoder"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "SW Engineer"
-  location         : "Seoul S.Korea"
+  location         : ""
   email            :
   links:
     - label: "Email"
