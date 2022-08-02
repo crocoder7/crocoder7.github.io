@@ -19,8 +19,8 @@ locale                   : "en-US"
 title                    : "Crocoder's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "SW Engineer"
-description              : "SW Engineer"
+name                     : ""
+description              : ""
 url                      : "https://crocoder7.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,8 +106,8 @@ analytics:
 author:
   name             : "Crocoder"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : #"I am an **amazing** person."
-  location         : #"Somewhere"
+  bio              : "SW Engineer"
+  location         : "@Seoul S.Korea"
   email            :
   links:
     - label: "Email"
