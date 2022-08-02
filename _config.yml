@@ -107,15 +107,15 @@ author:
   name             : "Crocoder"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "SW Engineer"
-  location         : "@Seoul S.Korea"
+  location         : "Seoul S.Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:crocoder7@gmail.com"
-    - label: "Website"
+    - label: "LinkedIn"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://www.linkedin.com/in/younghoon-kim-42159315a/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
