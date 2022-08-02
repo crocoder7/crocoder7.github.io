@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Crocoder's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : ""
+name                     : "SW Engineer"
 description              : "SW Engineer"
 url                      : "https://crocoder7.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
