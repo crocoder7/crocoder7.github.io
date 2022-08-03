@@ -5,7 +5,7 @@ categories:
   - DB
 last_modified_at: now
 ---
-## What is islocation level?
+# What is islocation level?
 * Isolation describes how changes applied by concurrent transactions are visible to each other.
 * There are four types of isolation level
   <ol>
@@ -18,7 +18,7 @@ last_modified_at: now
 * Reference
   * [Postgresql Docs](https://www.postgresql.org/docs/current/transaction-iso.html)
 
-## Read-Modify-Write Cycle
+# Read-Modify-Write Cycle
 * What happends when concurrent transactions try to change same data column?
 * Data race can occur on the situation above.
 * For example, when two transaction try to withdraw from the same bank account concurrently, second transaction can override the first transaction.
@@ -82,9 +82,8 @@ last_modified_at: now
 | Commit| Commit|
 | Begin| Begin|
 |UPDATE account SET balance = 5, version = 2 WHERE account_id = 1 AND version = 1; (returns 5)| |
-||UPDATE account SET balance = 20 WHERE account_id = 1 AND version = 1; (BLOCKED)|
+||UPDATE account SET balance = 20 WHERE account_id = 1 AND version = 1; (matching zero rows)|
 | Commit   ||
-||(matching zero rows)|
 ||(ROLLBACK)|
 
 * References
