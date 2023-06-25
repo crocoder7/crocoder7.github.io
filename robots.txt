@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://crocoder7.github.io/sitemap.xml
