@@ -7,7 +7,7 @@ categories:
   - Jenkins
 last_modified_at: now
 ---
-# Problems when installing jenkins on Amazon Linux based EC2
+# An error when installing jenkins on Amazon Linux based EC2
 I faced following error when I tried "sudo yum install jenkins"
 ```
 ...
