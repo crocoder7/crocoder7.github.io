@@ -1,5 +1,5 @@
 ---
-title: "Error faced when installing jenkins on EC2"
+title: "An error when installing jenkins on Amazon Linux"
 
 categories: 
   - AWS
@@ -7,7 +7,7 @@ categories:
   - Jenkins
 last_modified_at: now
 ---
-# Problems when installing jenkins on AWS Linux based EC2
+# Problems when installing jenkins on Amazon Linux based EC2
 I faced following error when I tried "sudo yum install jenkins"
 ```
 ...
