@@ -19,6 +19,5 @@ The following command have solved the problem.
 ```
 sudo chown -R $(id -u):$(id -g) $HOME/.docker
 ```
-
 * References
   * [Docker forum](https://www.jenkins.io/doc/book/installing/linux/#fedora](https://forums.docker.com/t/error-failed-to-solve-error-getting-credentials-err-exit-status-1-out/136124/3)https://forums.docker.com/t/error-failed-to-solve-error-getting-credentials-err-exit-status-1-out/136124/3)
