@@ -1,5 +1,5 @@
 ---
-title: "Minikube Nginx Ingress on local setup"
+title: "Minikube nginx ingress local setup"
 
 categories: 
   - k8s
