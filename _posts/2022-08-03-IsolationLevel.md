@@ -5,7 +5,7 @@ categories:
   - DB
 last_modified_at: now
 ---
-# What is islocation level?
+# What is isolation level?
 * Isolation describes how changes applied by concurrent transactions are visible to each other.
 * There are four types of isolation level
   <ol>
