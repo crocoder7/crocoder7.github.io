@@ -30,7 +30,9 @@ spec:
 I kept trying to access through minikube ip, which was 192.168.49.2 in my case, but couldn't get any response. <br>
 The solution for me was open up a new terminal and run `minikube tunnel` command. <br>
 After I ran the command, I was able to get response from localhost on the browser. <br>
+<br>
 What the command does is that it makes network connection between localhost and minikube. It is just like the service object needs port forwarding to access due to local environment. <br>
+<br>
 If you want to set up domain names in your ingress configuration for test, descriptions are below
 ```
 apiVersion: networking.k8s.io/v1
