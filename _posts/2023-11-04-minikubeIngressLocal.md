@@ -53,7 +53,8 @@ spec:
                   number: 8080
 ```
 After using configuration like above, the domain should be added to the host file. <br>
-In my case, the host file was located at `/private/etc/hosts`. Insert a new row of `127.0.0.1 local.minikube.com` and save it.
+In my case, the host file was located at `/private/etc/hosts`. <br>
+Insert a new row of `127.0.0.1 local.minikube.com` and save it.
 
 * References
   * [Stackoverflow](https://stackoverflow.com/questions/58561682/minikube-with-ingress-example-not-working)
