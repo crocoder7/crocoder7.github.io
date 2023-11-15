@@ -17,24 +17,15 @@ COPY --from=build /opt/java/openjdk/conf/security/java.security
 ```
 Adding copy command from the build stage in dockerfile, which was using jdk11 or 17 as base image, resolved the SunJCE access error. <br>
 When using jib instead of dockerfile requires different solution than previous, since that kind of copying command is impossible in JIB. <br><br>
-Here are the solutions when using JIB. <br>
-For gradle, add below to the build.gradle file
+Here are the solution when using JIB. <br>
+Adding jvm option has solved the problem
 ```
-tasks.withType(JavaCompile) {
-  options.compilerArgs += ['--add-exports=java.base/com.sun.crypto.provider=ALL-UNNAMED']
+jib {
+  ...
+  container {
+    jvmFlags = ["--add-exports=java.base/com.sun.crypto.provider=ALL-UNNAMED"]
+  }
 }
-```
-For Maven, add below to the POM file
-
-```
-<plugin>
-    <configuration>
-        <compilerArgs>
-            <arg>--add-exports=java.base/com.sun.crypto.provider=ALL-UNNAMED</arg>
-        </compilerArgs>  
-    </configuration>
-</plugin>
-
 ```
 
 * References
