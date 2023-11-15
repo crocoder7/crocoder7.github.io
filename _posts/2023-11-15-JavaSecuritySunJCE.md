@@ -1,5 +1,5 @@
 ---
-title: "cannot access SunJCE error in JDK11, 17"
+title: "Cannot access SunJCE error in JDK11 above"
 
 categories: 
   - Java
