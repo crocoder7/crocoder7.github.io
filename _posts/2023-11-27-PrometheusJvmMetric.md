@@ -113,7 +113,7 @@ kubectl patch svc kube-prometheus-stack-prometheus -n prometheus --type='json' -
 Please make sure that the name of your service monitor is on the Status -> Targets. <br>
 You can change its type back to cluster after you confirmed. <br>
 
-![flow diagram](/img/prometheus-custom-metrics-elements.png)
+![flow diagram](/assets/images/prometheus-custom-metrics-elements.png)
 
 **This is important**
 - You CANNOT use your service port NUMBER for the service monitor configuration of your yaml file.
