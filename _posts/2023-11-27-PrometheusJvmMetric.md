@@ -13,11 +13,11 @@ Amazon managed prometheus and grafana might be a good option for monitoring when
 Pros when using Amazon managed prometheus : Since it is not in out cluster, we don't have to worry about it affecting nodes of the cluster. <br>
 Prometheus operator is needed to be install in k8s cluster in order to send metric to our central Prometheus. <br>
 
-- First, create name space for prometheus
+- First, create name space for prometheus.
 ```
 kubectl create namespace prometheus
 ```
-- Second, create OIDC provider and service account (from the code below : iamserviceaccount). Attach prometheus write access policy to service account.
+- Second, create OIDC provider and service account (from the code below : iamserviceaccount). Attach prometheus write access policy to service account. 
 ```
 eksctl utils associate-iam-oidc-provider --cluster ${EKS_CLUSTER_NAME} --approve
 
