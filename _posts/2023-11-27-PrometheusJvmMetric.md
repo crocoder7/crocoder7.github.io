@@ -14,11 +14,13 @@ Pros when using Amazon managed prometheus : Since it is not in out cluster, we d
 Prometheus operator is needed to be install in k8s cluster in order to send metric to our central Prometheus. <br>
 
 - First, create name space for prometheus. <br>
+
 ```
 kubectl create namespace prometheus
 ```
 
 - Second, create OIDC provider and service account (from the code below : iamserviceaccount). Attach prometheus write access policy to service account. <br>
+
 ```
 eksctl utils associate-iam-oidc-provider --cluster ${EKS_CLUSTER_NAME} --approve
 
@@ -28,6 +30,7 @@ eksctl create iamserviceaccount --name my-service-account --namespace prometheus
 
 - Third, install prometheus operator using helm with values.yaml below. <br>
 This is values.yaml <br>
+
 ```
 alertmanager:
   enabled: false
@@ -62,9 +65,11 @@ prometheus:
 
 Please make sure that the value 'serviceMonitorSelectorNilUsesHelmValues' should set to false since we are using additional service monitor to collect JVM, Spring metric below. <br>
 Commands for installing prometheus with helm below. <br>
+
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 ```
+
 ```
 helm upgrade --install kube-prometheus-stack prometheus-community/kube-prometheus-stack \
 --namespace prometheus \
@@ -74,6 +79,7 @@ helm upgrade --install kube-prometheus-stack prometheus-community/kube-prometheu
 - Now, metrics of your k8s node is collected in your managed prometheus.
 From now on, it's time to collect JVM Spring metric! <br>
 Use the following configuration for service monitor yaml file. (Let's say the name of this yaml file service-monitor.yaml) <br>
+
 ```
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
@@ -93,17 +99,20 @@ spec:
     matchLabels:
       release: service-label
 ```
+
 ```
 kubectl apply -f service-monitor.yaml
 ```
 
 Please make sure your service monitor is registered properly. <br>
+
 ```
 kubectl get servicemonitors.monitoring.coreos.com -n prometheus
 ```
 
 The labels of the metadata might be different for the future so that please confirm. (It is said that service monitor is selected based on the label in some other articles.) <br>
 Please use the command below to find out the proper label. (I used 'kube-prometheus-stack-operator' to find out the label. You can use other objects on the list from the result of the command above.) <br>
+
 ```
 kubectl get servicemonitors.monitoring.coreos.com -n prometheus kube-prometheus-stack-operator -o yaml
 ```
@@ -111,6 +120,7 @@ kubectl get servicemonitors.monitoring.coreos.com -n prometheus kube-prometheus-
 Also, you can find out on the web UI of your prometheus operator. <br>
 You have change type of the prometheus since it is set to cluster which cannot be accessed from outside. <br>
 In my case, changed it to LoadBalancer type to access its web UI. <br>
+
 ```
 kubectl patch svc kube-prometheus-stack-prometheus -n prometheus --type='json' -p '[{"op": "replace", "path": "/spec/type", "value": "LoadBalancer"}]'
 ```
@@ -127,6 +137,7 @@ You can change its type back to cluster after you confirmed. <br>
 - Additional annotations for your service
 - Prometheus and actutator dependency should be properly configured and opend in your application.
 <br>
+
 ```
 apiVersion: v1
 kind: Service
