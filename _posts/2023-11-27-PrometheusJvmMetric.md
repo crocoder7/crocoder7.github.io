@@ -112,7 +112,8 @@ kubectl patch svc kube-prometheus-stack-prometheus -n prometheus --type='json' -
 ```
 Please make sure that the name of your service monitor is on the Status -> Targets. <br>
 You can change its type back to cluster after you confirmed. <br>
-
+<br>
+- This diagram shows well how the service monitor process works.
 ![flow diagram](/assets/images/prometheus-custom-metrics-elements.png)
 
 **This is important**
