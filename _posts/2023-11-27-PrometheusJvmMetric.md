@@ -6,6 +6,9 @@ categories:
   - JVM
   - Spring
   - DevOps
+  - Helm
+  - k8s
+  - metric
 last_modified_at: now
 ---
 # How to get centralize JVM & Spring metric using Prometheus
