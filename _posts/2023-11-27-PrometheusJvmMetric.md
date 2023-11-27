@@ -113,11 +113,13 @@ kubectl patch svc kube-prometheus-stack-prometheus -n prometheus --type='json' -
 Please make sure that the name of your service monitor is on the Status -> Targets. <br>
 You can change its type back to cluster after you confirmed. <br>
 
+![flow diagram](/img/prometheus-custom-metrics-elements.png)
+
 **This is important**
 - You CANNOT use your service port NUMBER for the service monitor configuration of your yaml file.
-  - If you haven't defined the name of your port, you should put name on it and use it in servcie monitor configuration!
+  - If you haven't defined the name of your port of your service object, you should put name on it and use it in servcie monitor configuration!
 - Additional annotations for your service
-
+- Prometheus and actutator dependency should be properly configured and opend in your application.
 ```
 apiVersion: v1
 kind: Service
@@ -140,9 +142,9 @@ spec:
      protocol: TCP
      targetPort: 8080
 ```
-
+This is what the service object configuration should be like.
 
 * References
-  * [Blog](https://medium.com/@damindubandara/configuring-jvm-monitoring-dashboard-in-grafana-using-spring-boot-actuator-with-prometheus-and-e7142b5e4c81)
+  * [Medium](https://medium.com/@damindubandara/configuring-jvm-monitoring-dashboard-in-grafana-using-spring-boot-actuator-with-prometheus-and-e7142b5e4c81)
   * [Blog](https://fabianlee.org/2022/07/07/prometheus-monitoring-a-custom-service-using-servicemonitor-and-prometheusrule/)
   * [Blog](https://malwareanalysis.tistory.com/602)
