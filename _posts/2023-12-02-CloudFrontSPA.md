@@ -36,7 +36,14 @@ last_modified_at: now
 - Second statement is to catch 404 response instead of 403 or 400 from cloudfront.
 - It is better to catch 404 since 403 is returned by WAF. <br>
 
-Now, you can access any url besides the base url.
+Now, you can access any url besides the base url. <br>
+
+# XML file does not appear error
+- If you don't set default root object on your CloudFront settings, you might face this error. 
+![root domain error](/assets/images/rootDomainError.png)
+
+- It can be solved by setting index.html as your default root object.
+![cloudfront setting](/assets/images/cloudfrontSetting.png)
 
 * References
   * [StackOverFlow](https://stackoverflow.com/questions/44318922/receive-accessdenied-when-trying-to-access-a-page-via-the-full-url-on-my-website)
