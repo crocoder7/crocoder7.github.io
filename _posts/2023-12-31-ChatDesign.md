@@ -62,6 +62,11 @@ public class ChatController {
 
 - If unread count of the message incremented, regardless of the user’s online status, the API that sets unread count to zero should be automatically called every time when other users in the chat room send message for online user. 
 
+![chatErd](/assets/images/chatErd.png)
+
+- This is the table schema of RDS.
+- Incrementing and resetting the unread count could be the cause of the late response under multiple requests, since it would update the same row at the same time.
+
 ### How to keep track of online users in the chat room.
 - STOMP create session for each websocket creation. 
 - We need to create redis session based on both websocket session and user id to distinguish multiple connection by one user. (If one user uses both phone and laptop to use application, there will be two different websocket session created for that one user.)
