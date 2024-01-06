@@ -1,5 +1,5 @@
 ---
-title: "Design of chatting system with Websocket, RDS, and Redis"
+title: "Design of chatting system with Websocket, RDB, and Redis"
 
 categories: 
   - Spring Boot
@@ -8,12 +8,12 @@ categories:
   - Redis
 last_modified_at: now
 ---
-# How I designed chatting system with Websocket, RDS, and Redis 
+# How I designed chatting system with Websocket, RDB, and Redis 
 Objectives : 
   1. The chatting message should be sent through Websocket STOMP and saved to the database for later read. 
   2. Users can find out unread count of the chatting message that other users sent in the chat room.
 ---
-- This is how I designed chatting system with RDS and Redis. 
+- This is how I designed chatting system with RDB and Redis. 
 - Since I used Spring Boot for backend, the detail implementation could be modified for your case.
 
 ### First, STOMP can be easily implemented in Spring Boot.
