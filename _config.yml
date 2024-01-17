@@ -114,7 +114,7 @@ author:
       url: "mailto:crocoder7@gmail.com"
     - label: "LinkedIn"
       icon: "fas fa-fw fa-link"
-      # url: ""
+      url: "https://www.linkedin.com/in/younghoon-kim-42159315a/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
