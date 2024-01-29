@@ -26,15 +26,18 @@ EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=local"]
 ```
 
-- This is a plain Dockerfile. It takes about **140 seconds** in my machine. 
+- This is a plain Dockerfile. It takes about **140 seconds** in my machine.
+
 ![plainTime](/assets/images/plainTime.png)
 
 Now, this is a Dockerfile with multi-stage build.  <br /><br />
 Please watch first comment of the script. <br /><br />
 Since dependencies of the system rarely changes, it improves build time by caching it’s layer. <br /><br />
 ![multistageTime](/assets/images/multistageTime.png)
-- **130 seconds** without that command,
+- **130 seconds** without that command, <br/>
+
 ![cachedTime](/assets/images/cachedTime.png)
+
 - About **86 seconds** with that command.
 
 ```
@@ -63,7 +66,7 @@ Lastly, If you are using gradle or maven, consider using JIB for building docker
 It is noted for jib from the google document that, <br /><br />
 **“It reads your build config, organizes your application into distinct layers (dependencies, resources, classes) and only rebuilds and pushes the layers that have changed.”** <br /><br />
 Jib provides much faster build time than using Dockerfile. <br /><br />
-![jibTime](/assets/images/jibTime.png)
+![jibTime](/assets/images/jibTime.png) <br /><br />
 It took about 6 seconds to build. <br /><br />
 The image size is almost the same, 241.64MB for using Dockerfile and 241.55MB for using JIB. <br /><br />
 
