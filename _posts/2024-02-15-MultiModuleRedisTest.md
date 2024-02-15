@@ -14,7 +14,7 @@ last_modified_at: now
 In multi-module system, setting up environment for integration test code can be pain in the ass.<br/><br/>
 Especially, when the child module uses database connection. <br/><br/>
 For testing environment, temporary database should be up and running for (relatively)short period of time and down after when test is done. <br/><br/>
-Embedded redis can be an option if your child module uses redis.<br/><br/> <br/><br/>
+Embedded redis can be an option if your child module uses redis.<br/><br/><br/>
 
 In gradle, testFixture can be used for parent module to exploit configuration of child module. <br/><br/>
 **Let’s say that parent module is called ‘A’ and child module is called ‘B’.** <br/><br/>
@@ -97,7 +97,7 @@ public class TestRedisConfig {
 ```
 In TestRedisConfig class, DependsOn annotation is used to prevent LettuceConnectionFactory creation before the embedded redis running. <br/><br/>
 The primary annotation is added to prevent multiple bean error, since the configuration for actual server also exist in main directory. <br/><br/>
-Please make sure that you have configured **spring.redis.hot and port** properly in your yml or properties file under testFixtures/resources directory. <br/><br/> <br/><br/>
+Please make sure that you have configured **spring.redis.hot and port** properly in your yml or properties file under testFixtures/resources directory. <br/><br/><br/>
 
 Module A should import the configuration above.
 
