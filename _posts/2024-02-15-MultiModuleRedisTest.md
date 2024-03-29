@@ -113,6 +113,7 @@ public class ParentTest {
 Note that properties option configured properly with the name of yml file in module B. <br/><br/>
 In this case, **application-b-test.yml** should be the name of the yml file in module B. <br/><br/>
 
+This article was created by Crocoder7. It is not to be copied without permission.
 
 #### References
   * [Gradle Document](https://docs.gradle.org/current/userguide/java_testing.html#consuming_test_fixtures_of_another_project)
