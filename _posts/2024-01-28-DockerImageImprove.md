@@ -95,6 +95,8 @@ If you want to test it in your local system, use *./gradlew jibDockerBuild* to o
 - If you are using gradle or maven, consider using JIB for building your docker image.
 - If you want to use Dockerfile, use multi-stage build, try to cache as much as possible for faster build time.
 
+This article was created by Crocoder7. It is not to be copied without permission.
+
 #### References
   * [Docker Document](https://www.docker.com/blog/9-tips-for-containerizing-your-spring-boot-code/)
   * [Google Document](https://cloud.google.com/blog/products/application-development/introducing-jib-build-java-docker-images-better?hl=en)
