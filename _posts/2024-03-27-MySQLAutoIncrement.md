@@ -29,3 +29,5 @@ Here are some pros and cons for using UUID as PK. <br/><br/>
 
 It would be better to use an auto-incremented value as the primary key (PK) for performance reasons. <br/> 
 Also, the benefits of using UUID as the primary key are somewhat trivial compared to using an auto-incremented value.
+
+This article was created by Crocoder7. It is not to be copied without permission.
