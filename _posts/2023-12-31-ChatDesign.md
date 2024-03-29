@@ -190,6 +190,8 @@ redisTemplate.convertAndSend(topic, payload);
 
 ![chatDesign](/assets/images/finalChat.png)
 
+This article was created by Crocoder7. It is not to be copied without permission.
+
 * References
   * [Spring Doc](https://docs.spring.io/spring-framework/reference/web/websocket/stomp/message-flow.html)
   * [Spring Doc](https://docs.spring.io/spring-framework/reference/web/websocket/stomp/interceptors.html)
