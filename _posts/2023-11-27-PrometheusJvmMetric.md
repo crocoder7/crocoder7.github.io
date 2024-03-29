@@ -165,6 +165,8 @@ spec:
 ```
 This is what the service object configuration should be like. <br>
 
+This article was created by Crocoder7. It is not to be copied without permission.
+
 * References
   * [Medium](https://medium.com/@damindubandara/configuring-jvm-monitoring-dashboard-in-grafana-using-spring-boot-actuator-with-prometheus-and-e7142b5e4c81)
   * [Blog](https://fabianlee.org/2022/07/07/prometheus-monitoring-a-custom-service-using-servicemonitor-and-prometheusrule/)
