@@ -45,6 +45,8 @@ Now, you can access any url besides the base url. <br>
 - It can be solved by setting index.html as your default root object.
 ![cloudfront setting](/assets/images/cloudfrontSetting.png)
 
+This article was created by Crocoder7. It is not to be copied without permission.
+
 * References
   * [StackOverFlow](https://stackoverflow.com/questions/44318922/receive-accessdenied-when-trying-to-access-a-page-via-the-full-url-on-my-website)
   * [Github](https://gist.github.com/bradwestfall/b5b0e450015dbc9b4e56e5f398df48ff)
