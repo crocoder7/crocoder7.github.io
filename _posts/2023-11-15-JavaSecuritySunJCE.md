@@ -28,5 +28,7 @@ jib {
 }
 ```
 
+This article was created by Crocoder7. It is not to be copied without permission.
+
 * References
   * [Stackoverflow](https://stackoverflow.com/questions/61957114/how-to-resolve-the-type-com-sun-crypto-provider-sunjce-is-not-accessible-with)
