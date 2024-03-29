@@ -56,6 +56,8 @@ After using configuration like above, the domain should be added to the host fil
 In my case, the host file was located at `/private/etc/hosts`. <br>
 Insert a new row of `127.0.0.1 local.minikube.com` and save it.
 
+This article was created by Crocoder7. It is not to be copied without permission.
+
 * References
   * [Stackoverflow](https://stackoverflow.com/questions/58561682/minikube-with-ingress-example-not-working)
   * [Minikube Doc](https://minikube.sigs.k8s.io/docs/handbook/accessing/#:~:text=minikube%20tunnel%20runs%20as%20a,on%20the%20host%20operating%20system.)
