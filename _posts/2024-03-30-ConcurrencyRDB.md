@@ -13,7 +13,7 @@ last_modified_at: now
 
 There are two types of locks that exist to solve concurrency problems in RDB.
 
-The first one is pessimistic locking. It uses a lock provided by the RDB. If a clause such as 'SELECT FOR UPDATE' is used, the RDB puts an exclusive lock on selected rows so that other queries cannot access them. <br/>
+The first one is pessimistic locking. It uses a lock provided by the RDB. If a clause such as 'SELECT FOR UPDATE' is used, the RDB puts an exclusive lock on selected rows so that other queries cannot access them. <br/><br/>
 Since it uses the lock provided by the database, there are possibilities of encountering deadlock situations.
 
 On the other hand, optimistic locking is done at the application level rather than the database level. It uses the version of the row and employs it in the update clause.
@@ -44,7 +44,8 @@ As you can see above, the response time is better for using optimistic locking i
 
 Therefore, it shows better performance when conflicts are rare, as it minimizes the overhead of managing locks and avoids blocking.
 
-How about in the case of higher loads? The results differ as the thread count increases to 500. Optimistic locking starts to emit errors, resulting in only 370 successful samples out of 500. <br/>
+How about in the case of higher loads? <br/> 
+The results differ as the thread count increases to 500. Optimistic locking starts to emit errors, resulting in only 370 successful samples out of 500. <br/><br/>
 The throughput of optimistic locking is 123 per second, which is lower than pessimistic locking's 166 per second. Most of the response times are under 14 ms for pessimistic locking (even though it lags much at first), while many response times for optimistic locking are over 15 ms.
 
 | Optimistic  | Pessimistic |
