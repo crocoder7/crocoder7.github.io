@@ -24,7 +24,9 @@ Here are some pros and cons for using UUID as PK. <br/><br/>
    It would also use more memory in the buffer pool, leading to increased memory pressure and a lower cache hit ratio.
 3. Join Queries would less efficient since NL joins use indexs for join query. Like mentioned above, require extra memory and I/O.
 4. Index fragmentation would arise over time. <br/>
-   It would require non-sequential access since the data in the index are not physically adjacent to each other(in SSD or HDD), thus increasing disk I/O.
+   It would only read the last page(block) of the index if it were using auto-incremented value when a new row is inserted. <br/>
+   However, a different page should be read for every new row inserted into the table if it were using UUID. <br/>
+   It would require non-sequential access, thus increasing disk I/O.
 <br/>
 
 It would be better to use an auto-incremented value as the primary key (PK) for performance reasons. <br/> 
